@@ -1,99 +1,131 @@
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-  </head>
-  <body>
-    <header>
-      <div class="navbar">
-        Resume builder
-        <button>My Account</button>
-      </div>
-    </header>
-    <main>
-      <section>
-        <div class="info">
-            <img class ="img" src="download (1).jpg" alt="Resume" />
-          <p id="line">Fast, Easy, and Effective Resume Builder</p>
-          <h3>
-            The best Resume Builder
-            <br />
-            Online
-          </h3>
-          <br />
-          <p>
-            If a sheet of paper represents your entire work
-            <br />
-            life, personality, and skills, it better be a pretty
-            <br />
-            amazing piece of paper — Let Zety do the heavy
-            <br />
-            lifting.
-          </p>
-          <button><a href="ask.html">Start Building Your Resume</a></button>
-          <button><a href="templete.html">Checkout the templete</a></button>
+
+<body>
+
+<div class="form-container">
+    <h2>Resume Form</h2>
+    <form id="resumeForm">
+        <input type="text" id="firstName" placeholder="First Name" required />
+        <input type="text" id="surname" placeholder="Surname" required />
+        <input type="text" id="title" placeholder="Professional Title" required />
+        <input type="file" id="profileImage" accept="image/*" required />
+
+        <textarea id="aboutMe" placeholder="About Me" required></textarea>
+
+        <h1>Contact Details</h1>
+        <input type="text" id="phone" placeholder="Phone Number" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="address" placeholder="Address" required />
+
+        <h1>Skills</h1>
+        <input type="text" id="skills" placeholder="Skills (comma separated)" required />
+
+        <h1>Experience</h1>
+        <div class="job">
+          <label for="jobTitle">Job Title</label>
+          <input type="text" id="jobTitle" placeholder="e.g. Accountant">
           
-           
+          <label for="jobDescription">Job Description</label>
+          <textarea id="jobDescription" placeholder="Brief explanation of the project"></textarea>
+
+          <label for="employer">Employer</label>
+          <input type="text" id="employer" placeholder="e.g. Best Business Solutions">
+
+          <label for="location">Location</label>
+          <input type="text" id="location" placeholder="e.g. Swabi">
           
+          <label for="startDate">Start Date</label>
+          <input type="month" id="startDate">
+          
+          <label for="endDate">End Date</label>
+          <input type="month" id="endDate">
+          
+          <input type="checkbox" id="currentlyWorkHere"> I currently work here
         </div>
-      </section>
-      <section>
-        <div class="features">
-           <img src="images.jpg" alt="Features" /> 
-          <div class="fea">
-            <h2>Change Your CV.
-              Change your life</h2>
-           
-            <p>
-              1- Click on ready-to-use expert suggestions
-              <br> 
-              to build your CV in minutes 
-              <br>
-              2- Blow away recruiters with sleek designs
-              <br>
-               3-Let employers see your true self—the best
-               <br>
-               candidate for the job
-              <br>
-            </p>
-            <button><a href="ask.html">Create your CV now</a></button>
-          </div>
 
-        </div>
-      </section>
-      <section>
-        <div class="slider-container">
-          <div class="slider">
-            <span>Achievements</span>
-            <span>Portfolio or Projects</span>
-            <span>Formatting</span>
-            <span>Education</span>
-            <span>Information</span>
-            <span>About You</span>
-          </div>
-        </div>
-      
-      </section>
-    </main>
+        <h1>Education</h1>
+        <label for="degree">Degree Earned</label>
+        <input type="text" id="degree" placeholder="e.g. Bachelors of Science">
+        
+        <label for="institution">School/University Name</label>
+        <input type="text" id="institution" placeholder="e.g. University of Karachi">
 
-    <footer>
-      <h6>
-        Our dynamic resume builder helps you create a stunning, professional
-        resume in just a few easy steps. No need for complicated design
-        software—just fill in your information and download your resume
-        instantly!
-      </h6>
-      <p id="d">About | Accessibility | Contact | Privacy Policy | Term of Service</p>
-      <p>© 2024 Works Limited. All Rights Reserved.</p>
-    </footer>
-    <script src="app.js"></script>
-  </body>
+        <label for="eduStartDate">Start Date</label>
+        <input type="date" id="eduStartDate">
+
+        <label for="eduEndDate">End Date</label>
+        <input type="date" id="eduEndDate">
+        
+        <h1>Certification</h1>
+        <label for="certName">Certificate Name</label>
+        <input type="text" id="certName" placeholder="e.g. Certified Analyst">
+        
+        <label for="certOrganization">Issuing Organization</label>
+        <input type="text" id="certOrganization" placeholder="e.g. Coursera">
+
+        <button type="submit">Generate Resume</button>
+    </form>
+</div>
+
+<div class="resume" id="resume">
+   
+    <div class="sidebar">
+        <div class="image-your">
+            <img src="/images (1).jpg" id="profileImg" alt="Profile Picture">
+        </div>
+        <div class="aboutME">
+            <p id="ps">About Me</p>
+            <p id="aboutMeText"></p>
+        </div>
+        <div class="contact-info">
+            <p id="phone-number"></p>
+            <p id="emailText"></p>
+            <p id="addressText"></p>
+        </div>
+        <div class="skills">
+            <div id="skills1">Skills</div>
+            <ul id="skillsList"></ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="names">
+            <p id="name"></p>
+            <p id="surnameText"></p>
+            <p id="titleText"></p>
+        </div>
+        <div class="experence">
+            <div class="exp">Experience</div>
+            <p id="jobInfo"></p>
+        </div>
+        <div class="edu">
+            <div class="exp">Education</div>
+            <p id="eduInfo"></p>
+        </div>
+        <div class="cert">
+            <div class="exp">Certification</div>
+            <p id="certInfo"></p>
+        </div>
+    </div>
+    
+</div>
+
+<button id="download-pdf">Download as PDF</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script src="/script.js"></script>
+</body>
 </html>
