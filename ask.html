@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Are You Uploading</title>
+    <style>
+      
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styling */
+.navbars {
+    background-color: rgb(110, 38, 38);
+    width: 100vw;
+    height: 50px;
+}
+
+.navbars a {
+    font-size: 24px;
+    font-weight: bold;
+    color: burlywood;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+/* Heading styling */
+#heading1 {
+    color: #570808;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Flexbox layout for the main content section */
+main {
+    flex: 1; /* Ensure main takes up available space */
+}
+
+section {
+    display: flex;
+    justify-content: space-around; /* Evenly space the boxes */
+    padding: 20px;
+    flex-wrap: wrap; /* Responsive wrap if the screen is smaller */
+}
+
+/* Upload box styling */
+.upload {
+    border: 3px solid rgb(109, 61, 7);
+    width: 40%;
+    background-color: #e4b792;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.upload h3 {
+    font-size: 20px;
+    color: #790404;
+    text-transform: capitalize;
+}
+
+/* Start box styling */
+.start {
+    border: 3px solid rgb(109, 61, 7);
+    width: 40%;
+    background-color: #e4b792;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    float: right;
+   
+   
+   
+}
+
+.start h2 {
+    text-transform: capitalize;
+    color: #790404;
+    margin-bottom: 10px;
+}
+
+.start p {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.start button {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #63360a;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.start button:hover {
+    background-color: #facd05;
+}
+
+.start button a {
+    color: rgb(231, 138, 23);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Back button styling */
+#back a {
+    text-decoration: none;
+    color: #570808;
+    font-size: 20px;
+}
+
+#back:hover {
+    background-color: #63360a;
+}
+
+.boxes{
+  display: flex;
+  
+}
+footer{
+    background-color: #110101;
+   color: rgb(238, 218, 191);
+   width: 100vw;
+   margin-bottom: 0%;
+   
+   height: 100px;
+   margin-top: 10px;
+} 
+
+    </style>
+  </head>
+  <body style="background-color: rgb(240, 216, 184);">
+    <header>
+      <div class="navbars">
+        <a href="#">Resume Builder</a>
+      </div>
+    </header>
+    
+    <main>
+      <section>
+      <div  >
+        <h1 id="heading1">Are You uploading and existing resume?</h1>
+        <h6 id="heading 2">Just review,edit an update it with new information</h6>
+        <div class="boxes">
+        <div class="upload">
+          <h3>Upload your
+            <br> 
+            Existing Resume</h3>
+          <form>
+            <input type="file" accept="image/*" id="imageUpload" />
+            <br /><br />
+            <img
+              id="imagePreview"
+              src=""
+              alt="Image Preview"
+              style="max-width: 300px; display: none"
+            />
+          </form>
+
+          <script>
+            const imageUpload = document.getElementById("imageUpload");
+            const imagePreview = document.getElementById("imagePreview");
+
+            imageUpload.addEventListener("change", function (event) {
+              const file = event.target.files[0];
+              if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                  imagePreview.src = e.target.result;
+                  imagePreview.style.display = "block";
+                };
+                reader.readAsDataURL(file);
+              }
+            });
+          </script>
+        </div>
+        
+        <div class="start">
+          <h2>Start from scratch</h2>
+          <p>
+             We'll guide you through
+             <br>
+            the whole process 
+            
+            so your skills can shine
+          </p>
+          <button><a href="index.html">Build Resume</a></button>
+        </div>
+      </div>
+        <div class="btn">
+         
+        <button id="back"><a href="homepage.html">Back</a></button>
+        </div>
+        
+      </div>
+    </section>
+    </main>
+    <footer>
+      <p>
+        Terms and Conditions | Privacy Policy | Accessibility | Contact Us ©
+        2024, Works Limited. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>

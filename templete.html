@@ -1,0 +1,241 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Template</title>
+    <style>
+      /* Basic Styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #ececf1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .resume {
+        display: flex;
+        width: 800px;
+        background: rgb(236, 215, 169);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+     
+        overflow: hidden;
+      }
+
+      .sidebar {
+        width: 30%;
+        background-color: rgb(133, 66, 3);
+        color: white;
+        padding: 20px;
+      }
+
+      .sidebar .image-your img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto 20px;
+      }
+
+      .sidebar .aboutME {
+        margin-bottom: 20px;
+      }
+
+      .sidebar .aboutME #ps {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        background-color: #ee850e;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      .sidebar .contact-info p {
+        margin: 8px 0;
+        font-size: 14px;
+      }
+
+      .skills {
+        margin-top: 20px;
+      }
+
+      .skills #skills1 {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        background-color: #ee850e;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      .skills ul {
+        list-style: none;
+      }
+
+      .skills ul li {
+        margin-bottom: 5px;
+       
+      }
+
+      .main-content {
+        width: 70%;
+        padding: 20px;
+      }
+
+      .names {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .names #n1 {
+        font-size: 36px;
+        font-weight: bold;
+      }
+
+      .names #s1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .names #p1 {
+        font-size: 18px;
+        color: #555;
+      }
+
+      .experence,
+      .edu,
+      .cert {
+        margin-bottom: 20px;
+      }
+
+      .experence .exp,
+      .edu .exp,
+      .cert .exp {
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: #c25d19;
+        font-weight: bold;
+      }
+
+      .experence p,
+      .edu p,
+      .cert p {
+        font-size: 14px;
+        margin: 5px 0;
+        color: #333;
+      }
+
+      .job-info,
+      .edu-info,
+      .cert-info {
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="resume">
+      
+      <div class="sidebar">
+        <div class="image-your">
+          <img src="images (1).jpg" alt="Profile Picture" />
+        </div>
+        <div class="aboutME">
+          <p id="ps">About Me</p>
+          <p id="py">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+            quisquam corporis nobis! Aliquam, suscipit tempore tenetur quia est
+          </p>
+        </div>
+        <div class="contact-info">
+          <p id="phone-number">+123-456-7890</p>
+          <p id="email">hello@reallygreatsite.com</p>
+          <p id="address">123 Anywhere St., Any City</p>
+        </div>
+        <div class="skills">
+          <div id="skills1">Skills</div>
+          <ul>
+            <li>Management Skills</li>
+            <li>Creativity</li>
+            <li>Digital Marketing</li>
+            <li>Negotiation</li>
+            <li>Critical Thinking</li>
+            <li>Leadership</li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="names">
+          <p id="n1">Amilie</p>
+          <p id="s1">Aryana</p>
+          <p id="p1">Cyber Security Analyst | Full Stack Developer</p>
+        </div>
+        <div class="experence">
+          <div class="exp">Experience</div>
+          <p class="job-info">
+            Studio Showde | Canberra - Australia | 2020 - 2022
+          </p>
+          <p id="disc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+            numquam obcaecati rem veritatis quo natus adipisci, quam dolorem
+          </p>
+        </div>
+        <div class="edu">
+          <div class="exp">Education</div>
+          <p class="edu-info">
+            BSc Computer Science | XYZ University | Canberra | 2016 - 2020
+          </p>
+        </div>
+        <div class="cert">
+          <div class="exp">Certification</div>
+          <p class="cert-info">Cyber Security Analyst | Google</p>
+        </div>
+      </div>
+    </div>
+    <button
+      id="download-pdf"
+      style="
+        margin: 20px;
+        padding: 10px 20px;
+        background-color:#9b5c14;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: larger;
+      "
+    >
+      Download as PDF
+    </button>
+   
+   
+   
+  </body>
+</html>
+
+
+
+
